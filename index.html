@@ -416,14 +416,20 @@
         <div class="contact-item"><div class="k">Address</div><div class="v">H5, Doddanagamangala, Electronic City Post,<br>Silicon Town, Sri Sai Layout, Bengaluru,<br>Karnataka – 560100</div></div>
         <div class="contact-item"><div class="k">GSTIN</div><div class="v">29GRSPS8383D1ZQ</div></div>
       </div>
-      <form class="contact-form reveal" onsubmit="return handleSubmit(event)">
+      <form class="contact-form reveal" id="enquiryForm" onsubmit="return handleSubmit(event)">
+        <input type="hidden" name="access_key" value="0c85bf64-75be-49a0-a342-2da7f4f04fa4">
+        <input type="hidden" name="subject" value="New enquiry from B.SMART website">
+        <input type="hidden" name="from_name" value="B.SMART Website">
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Your name" required>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
         <label for="company">Company</label>
-        <input id="company" type="text" placeholder="Your company">
+        <input id="company" name="company" type="text" placeholder="Your company">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Your phone number">
         <label for="msg">What do you need?</label>
-        <textarea id="msg" rows="4" placeholder="Tell us what you're looking to source..." required></textarea>
-        <button type="submit">Send Enquiry</button>
+        <textarea id="msg" name="message" rows="4" placeholder="Tell us what you're looking to source..." required></textarea>
+        <button type="submit" id="submitBtn">Send Enquiry</button>
+        <div id="formStatus" style="margin-top:14px; font-size:13px; text-align:center;"></div>
       </form>
     </div>
   </div>
@@ -447,10 +453,41 @@
 
   function handleSubmit(e){
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const msg = document.getElementById('msg').value;
-    const body = encodeURIComponent(`Name: ${name}\nCompany: ${document.getElementById('company').value}\n\n${msg}`);
-    window.location.href = `mailto:bsmartdistributionsales@gmail.com?subject=Enquiry from ${encodeURIComponent(name)}&body=${body}`;
+    const form = document.getElementById('enquiryForm');
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const data = new FormData(form);
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.textContent = '';
+    status.style.color = '#CFE8EC';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    })
+    .then(res => res.json())
+    .then(result => {
+      if(result.success){
+        status.textContent = "Thanks — your enquiry has been sent. We'll get back to you shortly.";
+        status.style.color = '#22D3EE';
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong. Please call or email us directly.";
+        status.style.color = '#FFB4B4';
+      }
+    })
+    .catch(() => {
+      status.textContent = "Network error. Please call or email us directly.";
+      status.style.color = '#FFB4B4';
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = 'Send Enquiry';
+    });
+
     return false;
   }
 
