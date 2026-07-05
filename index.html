@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.SMART | Industrial Distribution & Supply Chain Solutions | Bengaluru</title>
+<meta name="description" content="B.SMART supplies safety products, fasteners, tools, labels, automation components, MRO products and more to manufacturing industries across India. In-house 3D printing & prototyping. Based in Bengaluru, Karnataka.">
+<meta name="keywords" content="industrial distribution, industrial supplies Bengaluru, MRO products India, safety products PPE supplier, 3D printing Bengaluru, fasteners supplier India, B.SMART">
+<link rel="icon" type="image/png" href="images/icon.png">
+
+<!-- Open Graph for social/Google previews -->
+<meta property="og:title" content="B.SMART | Industrial Distribution & Supply Chain Solutions">
+<meta property="og:description" content="Engineering Trust. Powering Industry. Industrial products, custom 3D printing & supply chain solutions for manufacturers across India.">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:type" content="website">
+
+<style>
+  :root{
+    --navy:#071E42;
+    --teal:#0E7C86;
+    --bright-teal:#0796A5;
+    --cyan:#22D3EE;
+    --ink:#0B2340;
+    --steel:#48505A;
+    --mist:#EAF3F5;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  section{padding:88px 0;}
+  h1,h2,h3{font-family: Cambria, Georgia, serif; line-height:1.15;}
+  .eyebrow{
+    font-size:13px; font-weight:bold; letter-spacing:2px; text-transform:uppercase;
+    color:var(--bright-teal);
+  }
+  .eyebrow.on-dark{color:var(--cyan);}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(7,30,66,0.92);
+    backdrop-filter:blur(6px);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 24px; max-width:1180px; margin:0 auto;}
+  .nav-logo{display:flex; align-items:center; gap:10px; font-weight:bold; color:#fff; font-size:18px;}
+  .nav-logo img{width:30px; height:24px;}
+  .nav-links{display:flex; gap:28px; font-size:14px; font-weight:600;}
+  .nav-links a{color:#CFE8EC;}
+  .nav-links a:hover{color:var(--cyan);}
+  .nav-cta{
+    background:var(--cyan); color:var(--navy); font-weight:bold; font-size:13px;
+    padding:9px 18px; border-radius:24px;
+  }
+  .nav-toggle{display:none; color:#fff; font-size:24px; background:none; border:none;}
+
+  @media (max-width:820px){
+    .nav-links{display:none;}
+    .nav-toggle{display:block;}
+    .nav-links.open{
+      display:flex; flex-direction:column; position:absolute; top:56px; left:0; right:0;
+      background:var(--navy); padding:20px 24px; gap:18px;
+    }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--teal) 60%, var(--bright-teal) 100%);
+    min-height:100vh; display:flex; align-items:center; color:#fff;
+    position:relative; overflow:hidden; padding-top:90px;
+  }
+  .hero::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at 80% 20%, rgba(34,211,238,0.18), transparent 55%);
+  }
+  .hero-inner{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:center;}
+  .hero-eyebrow{font-size:14px; font-weight:bold; letter-spacing:2px; color:#CFF3F8; text-transform:uppercase; margin-bottom:18px;}
+  .hero h1{font-size:44px; color:#fff; margin-bottom:20px;}
+  .hero h1 em{font-style:normal; color:var(--cyan);}
+  .hero p.lead{font-size:17px; color:#DCF4F7; max-width:520px; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:14px 28px; border-radius:6px; font-weight:bold; font-size:14px;
+    letter-spacing:0.3px; transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--cyan); color:var(--navy);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,0.55); color:#fff;}
+  .hero-logo-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18);
+    border-radius:16px; padding:36px; text-align:center;
+  }
+  .hero-logo-card img{width:150px; height:151px; margin:0 auto 18px; border-radius:12px;}
+  .hero-logo-card .tag{color:var(--cyan); font-style:italic; font-weight:bold; font-size:15px;}
+  .hero-stats{display:flex; justify-content:center; gap:28px; margin-top:26px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.18);}
+  .hero-stats div{text-align:center;}
+  .hero-stats .num{font-size:22px; font-weight:bold; color:#fff; font-family:Cambria,Georgia,serif;}
+  .hero-stats .lbl{font-size:11px; color:#BEE9EE; text-transform:uppercase; letter-spacing:1px;}
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero h1{font-size:32px;}
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .sec-head{max-width:640px; margin-bottom:48px;}
+  .sec-head h2{font-size:32px; color:var(--ink); margin-top:10px;}
+  .sec-head p{color:var(--steel); margin-top:14px; font-size:15.5px;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--white);}
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .about-text p{color:var(--steel); margin-bottom:16px; font-size:15px;}
+  .about-card{
+    background:var(--navy); color:#fff; border-radius:14px; padding:32px;
+  }
+  .about-card .row{margin-bottom:20px;}
+  .about-card .row:last-child{margin-bottom:0;}
+  .about-card .k{font-size:11px; font-weight:bold; letter-spacing:1.5px; color:var(--cyan); text-transform:uppercase; margin-bottom:4px;}
+  .about-card .v{font-size:14.5px; color:#E4F5F7;}
+  @media (max-width:820px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* ---------- PRODUCTS ---------- */
+  .products{background:var(--mist);}
+  .prod-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .prod-card{
+    background:#fff; border-radius:10px; padding:20px 18px; box-shadow:0 4px 14px rgba(7,30,66,0.06);
+  }
+  .prod-card h4{font-size:14.5px; color:var(--ink); margin-bottom:8px;}
+  .prod-card p{font-size:12.5px; color:var(--steel);}
+  .prod-card.highlight{background:var(--navy); color:#fff;}
+  .prod-card.highlight h4{color:var(--cyan);}
+  .prod-card.highlight p{color:#CFE8EC;}
+  @media (max-width:900px){ .prod-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .prod-grid{grid-template-columns:1fr;} }
+
+  /* ---------- GALLERY (3D printing) ---------- */
+  .printing{background:var(--white);}
+  .print-layout{display:grid; grid-template-columns:1fr 1.2fr; gap:50px; align-items:center;}
+  .print-cap{list-style:none;}
+  .print-cap li{padding:10px 0 10px 26px; position:relative; color:var(--steel); font-size:14.5px; border-bottom:1px solid #EEE;}
+  .print-cap li::before{content:"→"; position:absolute; left:0; color:var(--bright-teal); font-weight:bold;}
+  .print-gallery{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .print-gallery figure{margin:0; border-radius:10px; overflow:hidden; position:relative; aspect-ratio:1/0.85;}
+  .print-gallery img{width:100%; height:100%; object-fit:cover;}
+  .print-gallery figcaption{
+    position:absolute; bottom:0; left:0; right:0; padding:8px 10px;
+    background:linear-gradient(transparent, rgba(7,30,66,0.85)); color:#fff; font-size:11.5px; font-weight:600;
+  }
+  @media (max-width:900px){ .print-layout{grid-template-columns:1fr;} }
+
+  /* ---------- INDUSTRIES ---------- */
+  .industries{background:var(--mist);}
+  .ind-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .ind-card{border-radius:10px; overflow:hidden; position:relative; aspect-ratio:1/0.95; box-shadow:0 4px 14px rgba(7,30,66,0.08);}
+  .ind-card img{width:100%; height:100%; object-fit:cover; transition:transform .3s ease;}
+  .ind-card:hover img{transform:scale(1.06);}
+  .ind-card span{
+    position:absolute; bottom:0; left:0; right:0; padding:10px; text-align:center;
+    background:linear-gradient(transparent, rgba(7,30,66,0.9)); color:#fff; font-size:12.5px; font-weight:bold;
+  }
+  @media (max-width:900px){ .ind-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:600px){ .ind-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* ---------- WHY CHOOSE ---------- */
+  .why{background:var(--navy); color:#fff;}
+  .why .sec-head p{color:#BEE9EE;}
+  .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .why-card{background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:26px;}
+  .why-card .dot{width:10px; height:10px; border-radius:50%; background:var(--cyan); margin-bottom:16px;}
+  .why-card h4{font-size:16px; margin-bottom:8px; color:#fff;}
+  .why-card p{font-size:13.5px; color:#CFE8EC;}
+  @media (max-width:900px){ .why-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .why-grid{grid-template-columns:1fr;} }
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--white);}
+  .proc-row{display:flex; gap:0; flex-wrap:wrap;}
+  .proc-step{flex:1; min-width:180px; text-align:center; padding:0 14px; position:relative;}
+  .proc-step .n{
+    width:54px; height:54px; border-radius:50%; background:var(--bright-teal); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:20px;
+    margin:0 auto 16px;
+  }
+  .proc-step h4{font-size:14.5px; margin-bottom:8px;}
+  .proc-step p{font-size:12.5px; color:var(--steel);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:linear-gradient(135deg, var(--navy), var(--teal));  color:#fff;}
+  .contact .sec-head p{color:#BEE9EE;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px;}
+  .contact-item{margin-bottom:24px;}
+  .contact-item .k{font-size:11px; font-weight:bold; letter-spacing:1.5px; color:var(--cyan); text-transform:uppercase; margin-bottom:6px;}
+  .contact-item .v{font-size:16px; color:#fff;}
+  .contact-item a.v{transition:color .15s;}
+  .contact-item a.v:hover{color:var(--cyan);}
+  .contact-form{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16); border-radius:14px; padding:30px;}
+  .contact-form label{display:block; font-size:12px; font-weight:bold; letter-spacing:0.5px; margin-bottom:6px; color:#CFE8EC;}
+  .contact-form input, .contact-form textarea{
+    width:100%; padding:11px 14px; margin-bottom:16px; border-radius:6px; border:1px solid rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.08); color:#fff; font-family:inherit; font-size:14px;
+  }
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:#9FC9CF;}
+  .contact-form button{
+    width:100%; padding:13px; border:none; border-radius:6px; background:var(--cyan); color:var(--navy);
+    font-weight:bold; font-size:14px; cursor:pointer;
+  }
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#051526; color:#8FA9B3; padding:36px 0; font-size:13px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  footer a{color:#BEE9EE;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-logo"><img src="images/icon.png" alt="B.SMART"> B.SMART</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#printing">3D Printing</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-eyebrow">Industrial Distribution &amp; Supply Chain Solutions</div>
+      <h1>Engineering trust.<br><em>Powering</em> Indian industry.</h1>
+      <p class="lead">B.SMART supplies safety products, fasteners, tools, labels, automation components and MRO essentials to manufacturers across India — backed by in-house 3D printing &amp; prototyping.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Request a Quote</a>
+        <a href="#products" class="btn btn-ghost">View Products</a>
+      </div>
+    </div>
+    <div class="hero-logo-card">
+      <img src="images/logo.png" alt="B.SMART logo">
+      <div class="tag">Engineering Trust. Powering Industry.</div>
+      <div class="hero-stats">
+        <div><div class="num">16+</div><div class="lbl">Product Categories</div></div>
+        <div><div class="num">14</div><div class="lbl">Industries Served</div></div>
+        <div><div class="num">Bengaluru</div><div class="lbl">Based In</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">Who We Are</div>
+        <div class="sec-head" style="margin-bottom:0;">
+          <h2>About B.SMART</h2>
+        </div>
+        <div class="about-text" style="margin-top:20px;">
+          <p>B.SMART is an industrial distribution and supply chain solutions company serving manufacturing enterprises across India with a comprehensive portfolio of industrial products and support services.</p>
+          <p>We consolidate multiple categories of industrial supply under one dependable partner — safety equipment, labelling and barcode systems, adhesives, fasteners, tools, electrical and automation components, pneumatic and hydraulic parts, packaging, and MRO consumables.</p>
+          <p>B.SMART also offers in-house 3D printing and rapid prototyping, extending our distribution expertise into custom manufacturing for parts, décor, signage and personalised gifting.</p>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <div class="row"><div class="k">Founder &amp; Proprietor</div><div class="v">Santhosha</div></div>
+        <div class="row"><div class="k">Legal Entity</div><div class="v">SANTHOSHA (Proprietorship), trading as B.SMART</div></div>
+        <div class="row"><div class="k">GSTIN</div><div class="v">29GRSPS8383D1ZQ</div></div>
+        <div class="row"><div class="k">Registered Office</div><div class="v">H5, Doddanagamangala, Electronic City Post, Silicon Town, Sri Sai Layout, Bengaluru, Karnataka – 560100</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What We Supply</div>
+      <h2>16 Categories. One Trusted Source.</h2>
+      <p>From safety products to automation components — everything a modern production line needs, from a single accountable supplier.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card reveal"><h4>Safety Products (PPE)</h4><p>Head, eye, hand, respiratory &amp; body protection.</p></div>
+      <div class="prod-card reveal"><h4>Industrial Labels &amp; Barcode</h4><p>Asset labels, compliance labels, barcode consumables.</p></div>
+      <div class="prod-card reveal"><h4>Adhesives &amp; Tapes</h4><p>Industrial bonding, masking &amp; packaging adhesives.</p></div>
+      <div class="prod-card reveal"><h4>Fasteners</h4><p>Nuts, bolts, screws across standard specifications.</p></div>
+      <div class="prod-card reveal"><h4>Hand &amp; Power Tools</h4><p>Precision and powered tools for production &amp; maintenance.</p></div>
+      <div class="prod-card reveal"><h4>Cutting Tools</h4><p>Industrial cutting, drilling &amp; machining solutions.</p></div>
+      <div class="prod-card reveal"><h4>Packaging Materials</h4><p>Corrugated, protective &amp; industrial packaging supplies.</p></div>
+      <div class="prod-card reveal"><h4>Electrical Items</h4><p>Wiring, switchgear &amp; electrical maintenance parts.</p></div>
+      <div class="prod-card reveal"><h4>Automation Components</h4><p>Sensors, controllers for automated lines.</p></div>
+      <div class="prod-card reveal"><h4>Pneumatic &amp; Hydraulic</h4><p>Cylinders, valves, hoses, seals &amp; fittings.</p></div>
+      <div class="prod-card reveal"><h4>Machine Spare Parts &amp; MRO</h4><p>OEM spares and maintenance essentials.</p></div>
+      <div class="prod-card highlight reveal"><h4>3D Printing &amp; Prototyping</h4><p>In-house rapid prototyping &amp; custom parts. <a href="#printing" style="color:#fff; text-decoration:underline;">See gallery →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D PRINTING -->
+<section class="printing" id="printing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">From Idea To Reality</div>
+      <h2>3D Printing &amp; Prototyping</h2>
+      <p>In-house rapid manufacturing for prototypes, custom parts, festive décor, signage and personalised gifting.</p>
+    </div>
+    <div class="print-layout">
+      <ul class="print-cap reveal">
+        <li>Functional prototypes &amp; proof-of-concept models</li>
+        <li>Custom figurines &amp; décor with hand-finishing</li>
+        <li>Personalised nameplates &amp; signage</li>
+        <li>Jigs, fixtures &amp; short-run components</li>
+        <li>Custom gifting &amp; corporate merchandise</li>
+      </ul>
+      <div class="print-gallery reveal">
+        <figure><img src="images/p_ganesh_om.jpg" alt="Custom festive idol 3D print"><figcaption>Festive idols &amp; décor</figcaption></figure>
+        <figure><img src="images/p_buddy_plaque.jpg" alt="Custom signage 3D print"><figcaption>Custom signage</figcaption></figure>
+        <figure><img src="images/p_tree_lamp.jpg" alt="Personalised gifting lamp 3D print"><figcaption>Personalised gifting</figcaption></figure>
+        <figure><img src="images/p_ganesh_closeup.jpg" alt="Detailed figurine 3D print"><figcaption>Detailed figurines</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Trusted Across Sectors</div>
+      <h2>Industries We Serve</h2>
+      <p>Distinct part types, distinct quality requirements — supported by the same dependable service.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal"><img src="images/real_automotive.jpg" alt="Automotive parts"><span>Automotive</span></div>
+      <div class="ind-card reveal"><img src="images/real_aerospace.jpg" alt="Aerospace components"><span>Aerospace</span></div>
+      <div class="ind-card reveal"><img src="images/real_electronics.jpg" alt="Electronics components"><span>Electronics</span></div>
+      <div class="ind-card reveal"><img src="images/real_medical.jpg" alt="Medical device manufacturing"><span>Medical Devices</span></div>
+      <div class="ind-card reveal"><img src="images/real_fmcg.jpg" alt="FMCG products"><span>FMCG</span></div>
+      <div class="ind-card reveal"><img src="images/real_food.jpg" alt="Food processing"><span>Food Processing</span></div>
+      <div class="ind-card reveal"><img src="images/real_textile.jpg" alt="Textile manufacturing"><span>Textile</span></div>
+      <div class="ind-card reveal"><img src="images/real_steel.jpg" alt="Steel industry"><span>Steel</span></div>
+      <div class="ind-card reveal"><img src="images/real_pharma.jpg" alt="Pharmaceutical manufacturing"><span>Pharmaceutical</span></div>
+      <div class="ind-card reveal"><img src="images/real_chemical.jpg" alt="Chemical industry"><span>Chemical</span></div>
+      <div class="ind-card reveal"><img src="images/real_oem.jpg" alt="OEM manufacturers"><span>OEM Manufacturers</span></div>
+      <div class="ind-card reveal"><img src="images/real_msme.jpg" alt="MSMEs"><span>MSMEs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow on-dark">Why B.SMART</div>
+      <h2 style="color:#fff;">Six Reasons Manufacturers Partner With Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="dot"></div><h4>Single-Source Convenience</h4><p>15+ categories under one roof — less vendor management overhead.</p></div>
+      <div class="why-card reveal"><div class="dot"></div><h4>Quality Assurance</h4><p>Sourced from verified manufacturers, checked against industrial standards.</p></div>
+      <div class="why-card reveal"><div class="dot"></div><h4>Competitive Pricing</h4><p>Direct sourcing and volume efficiencies passed on transparently.</p></div>
+      <div class="why-card reveal"><div class="dot"></div><h4>Technical Support</h4><p>A team that helps you pick the right spec for your application.</p></div>
+      <div class="why-card reveal"><div class="dot"></div><h4>Reliable Delivery</h4><p>Logistics planning built around production-critical timelines.</p></div>
+      <div class="why-card reveal"><div class="dot"></div><h4>Scalable Partnership</h4><p>From single-site MSMEs to multi-plant enterprise accounts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How It Works</div>
+      <h2>Enquiry to Delivery</h2>
+      <p>A simple, transparent journey — from your first message to after-sales support.</p>
+    </div>
+    <div class="proc-row">
+      <div class="proc-step reveal"><div class="n">1</div><h4>Enquiry</h4><p>Share your requirement by phone, email or form.</p></div>
+      <div class="proc-step reveal"><div class="n">2</div><h4>Quotation</h4><p>Receive a detailed, competitive quote fast.</p></div>
+      <div class="proc-step reveal"><div class="n">3</div><h4>Order Confirmation</h4><p>Terms, pricing and schedule finalised.</p></div>
+      <div class="proc-step reveal"><div class="n">4</div><h4>Delivery</h4><p>Quality-checked, packed and dispatched on time.</p></div>
+      <div class="proc-step reveal"><div class="n">5</div><h4>After-Sales Support</h4><p>We stay available for reorders and support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow on-dark">Get In Touch</div>
+      <h2 style="color:#fff;">Let's Build a Reliable Supply Partnership</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-item"><div class="k">Phone</div><a class="v" href="tel:+919902102057">+91 99021 02057</a></div>
+        <div class="contact-item"><div class="k">Email</div><a class="v" href="mailto:bsmartdistributionsales@gmail.com">bsmartdistributionsales@gmail.com</a></div>
+        <div class="contact-item"><div class="k">Address</div><div class="v">H5, Doddanagamangala, Electronic City Post,<br>Silicon Town, Sri Sai Layout, Bengaluru,<br>Karnataka – 560100</div></div>
+        <div class="contact-item"><div class="k">GSTIN</div><div class="v">29GRSPS8383D1ZQ</div></div>
+      </div>
+      <form class="contact-form reveal" onsubmit="return handleSubmit(event)">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+        <label for="company">Company</label>
+        <input id="company" type="text" placeholder="Your company">
+        <label for="msg">What do you need?</label>
+        <textarea id="msg" rows="4" placeholder="Tell us what you're looking to source..." required></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span id="year"></span> B.SMART — a unit of Santhosha. All rights reserved.</div>
+    <div><a href="mailto:bsmartdistributionsales@gmail.com">bsmartdistributionsales@gmail.com</a> · <a href="tel:+919902102057">+91 99021 02057</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  }));
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const msg = document.getElementById('msg').value;
+    const body = encodeURIComponent(`Name: ${name}\nCompany: ${document.getElementById('company').value}\n\n${msg}`);
+    window.location.href = `mailto:bsmartdistributionsales@gmail.com?subject=Enquiry from ${encodeURIComponent(name)}&body=${body}`;
+    return false;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
